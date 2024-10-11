@@ -1,0 +1,475 @@
+/* Overall Page */
+.mainContainer {
+    font-family: "Maven Pro", sans-serif;
+}
+
+#menuIcon {
+    display: none;
+}
+
+.topNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* User Div Styles */
+.userDiv {
+    margin-left: 6rem;
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Center vertically */
+    font-family: 'Lobster', cursive;
+    /* Use Lobster font */
+    position: relative;
+    /* For positioning pseudo-elements */
+    font-size: 24px;
+    /* Base font size */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition for color and transform */
+}
+
+/* Icon Styles */
+.userDiv #faUser {
+    margin-right: 10px;
+    /* Space between icon and name */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the icon */
+}
+
+/* Hover Effect for UserDiv */
+.userDiv:hover {
+    color: #FD8F00;
+    /* Change color on hover */
+    transform: scale(1.1);
+    /* Slightly enlarge */
+}
+
+/* Hover Effect for the Icon */
+.userDiv:hover #faUser {
+    transform: rotate(360deg);
+    /* Rotate icon on hover */
+}
+
+/* Animated Underline */
+.userDiv::after {
+    content: '';
+    /* Empty content for pseudo-element */
+    display: block;
+    /* Make it a block element */
+    height: 2px;
+    /* Height of the underline */
+    width: 100%;
+    /* Full width of the userDiv */
+    background-color: #FD8F00;
+    /* Color of the underline */
+    position: absolute;
+    /* Positioning */
+    left: 0;
+    /* Align to the left */
+    bottom: 0;
+    /* Align to the bottom */
+    transform: scaleX(0);
+    /* Initially hidden */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the scale */
+}
+
+/* Show underline on hover */
+.userDiv:hover::after {
+    transform: scaleX(1);
+    /* Expand to full width */
+}
+
+
+.userDiv svg {
+    margin-right: 10px;
+}
+
+.topNavLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.topNavLinks a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    /* For the underline effect */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth hover effect for color and scale */
+}
+
+.topNavLinks a:hover {
+    color: #FD8F00;
+    /* Hover color effect */
+    transform: scale(1.1);
+    /* Scale up slightly on hover */
+}
+
+/* Underline Effect */
+.topNavLinks a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: #FD8F00;
+    /* Underline color */
+    bottom: -5px;
+    /* Position of the underline */
+    left: 0;
+    transform: scaleX(0);
+    /* Start with no underline */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the underline */
+}
+
+.topNavLinks a:hover::after {
+    transform: scaleX(1);
+    /* Scale the underline to full width on hover */
+}
+
+
+.theme {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-right: 5rem;
+    cursor: pointer;
+}
+
+.theme svg {
+    margin-right: 8px;
+}
+
+#faMoon {
+    font-size: 1.9rem;
+}
+
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    /* Ensure no margin is applied */
+    padding: 0;
+    /* Remove padding that might be causing overflow */
+    width: 100%;
+    /* Ensure the body div doesn't exceed 100% of the viewport */
+    box-sizing: border-box;
+    /* Include padding/border in element's width/height */
+}
+
+#myImage {
+    height: 25rem;
+    margin-right: 6rem;
+}
+
+.Info {
+    margin-left: 6rem;
+    text-align: left;
+}
+
+.Info h1 {
+    font-size: 40px;
+}
+
+.Info button {
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    background-color: #FD8F00;
+    /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for background color, scale, and shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Initial shadow */
+}
+
+/* Hover Effects */
+.Info button:hover {
+    background-color: #FFC107;
+    /* Lighter button color on hover */
+    transform: scale(1.05) translateY(-2px);
+    /* Scale up and lift slightly */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    /* Increased shadow on hover */
+    animation: pulse 0.6s infinite;
+    /* Pulse effect */
+}
+
+/* Keyframes for Pulse Effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1.05) translateY(-2px);
+        /* Start scaled up */
+    }
+
+    50% {
+        transform: scale(1.1) translateY(-3px);
+        /* Scale up a bit more */
+    }
+
+    100% {
+        transform: scale(1.05) translateY(-2px);
+        /* Return to the original hover state */
+    }
+}
+
+
+/* Cool Transition for Text */
+.name,
+.title {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+    /* Add a slight zoom effect */
+    color: #000;
+    /* Start with black text */
+    animation: uniqueSlideUp 1.2s ease forwards;
+    /* Make the animation a bit longer */
+}
+
+.name {
+    animation-delay: 0.5s;
+}
+
+.title {
+    animation-delay: 1.5s;
+}
+
+/* Animation Keyframes with Color Change and Zoom Effect */
+@keyframes uniqueSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+        /* Start slightly smaller */
+        color: #000;
+        /* Start with black text */
+    }
+
+    50% {
+        color: #FD8F00;
+        /* Change to button color midway */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        /* End at normal size */
+        color: #FD8F00;
+        /* Final color is the button's color */
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+    #myImage {
+        height: 20rem;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+    #myImage {
+        height: 17rem;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1010px) {
+    #myImage {
+        margin-right: 2rem;
+        /* Adjust margin for images */
+    }
+
+    .body {
+        display: block;
+        margin: 0 auto;
+        /* Center the body content */
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #myImage {
+        margin-left: 0rem;
+        margin-right: 0;
+        /* Remove margin-right to prevent overflow */
+        width: 100%;
+        /* Make the image responsive */
+    }
+
+    .body {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        /* Ensure no padding causes overflow */
+        width: 100%;
+        /* Set the width to 100% to prevent any overflow */
+    }
+
+    .topNavLinks,
+    .theme {
+        display: none;
+        /* Hide top navigation on smaller screens */
+    }
+
+    .Info {
+        margin-left: 2rem;
+    }
+
+    .theme {
+        margin-right: 0rem;
+        display: block;
+    }
+
+    .userDiv {
+        margin-left: 1rem;
+    }
+
+    #themeColor {
+        display: none;
+    }
+
+    #menuIcon {
+        display: block;
+        height: 2rem;
+        cursor: pointer;
+    }
+}
+
+/* Dropdown Menu Styles */
+.dropdownMenu {
+    position: absolute;
+    /* Position it below the nav */
+    right: 20px;
+    /* Align to the right of the nav */
+    background-color: #ffffff;
+    /* Use your desired background color */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+    padding: 10px;
+    /* Padding inside the menu */
+    z-index: 100;
+    /* Make sure it's above other content */
+    opacity: 0;
+    /* Start as invisible */
+    transform: translateY(-10px);
+    /* Initial position for the animation */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Smooth transition */
+}
+
+/* Visible State of Dropdown Menu */
+.dropdownMenu.open {
+    opacity: 1;
+    /* Fully visible */
+    transform: translateY(0);
+    /* Move to original position */
+}
+
+/* Dropdown Links Styles */
+.dropdownMenu a {
+    display: block;
+    /* Each link on a new line */
+    padding: 8px 16px;
+    /* Padding for each link */
+    color: #000000;
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    transition: background-color 0.3s;
+    /* Transition for hover effect */
+    text-align: left;
+}
+
+/* Hover Effect for Links */
+.dropdownMenu a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Light hover background */
+}
+
+.projects {
+    margin-top: 10rem;
+}
+
+.projects h1 {
+    font-family: 'Montserrat', sans-serif;
+    /* Or use 'Roboto', sans-serif */
+    font-weight: 700;
+    /* Bold text */
+    font-size: 36px;
+    /* Adjust size as needed */
+    color: #333;
+    /* Dark color for contrast */
+    margin: 20px 0;
+    /* Margin for spacing */
+    text-align: center;
+    /* Centered text */
+}
+
+.project-images {
+    position: relative;
+    width: 100%; /* Full width of the parent container */
+    max-width: 1000px; /* Maximum width for the image slider */
+    height: 600px; /* Height of the image container */
+    margin: 0 auto; /* Center the slider horizontally */
+    overflow: hidden;
+}
+
+.project-images img {
+    width: 100%; /* Make the image take the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.8); /* Shadow only on the left */
+    border-radius: 5px; /* Optional: add border radius for a smoother look */
+}
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px; /* Adjust size as needed */
+    z-index: 10;
+    border-radius: 5px; /* Optional: add border radius for a nicer look */
+}
+
+.arrow.left {
+    left: 10px; /* Adjust position as needed */
+}
+
+.arrow.right {
+    right: 10px; /* Adjust position as needed */
+}
+
+.indicators {
+    display: flex;
+    justify-content: center; /* Center the indicators */
+    margin-top: 10px; /* Space between the image and indicators */
+}
+
+.indicator {
+    width: 12px; /* Size of the circles */
+    height: 12px; /* Size of the circles */
+    border-radius: 50%; /* Make them circular */
+    background-color: #ccc; /* Inactive color */
+    margin: 0 5px; /* Space between circles */
+    cursor: pointer; /* Show pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for color change */
+}
+
+.indicator.active {
+    background-color: #FD8F00; /* Active color */
+}
