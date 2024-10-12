@@ -81,7 +81,7 @@ const Portfolio = () => {
                 </div>
             </div>
             <div className='projects'>
-                <h1>Projects Developed for Corporate <br /> Clients</h1>
+                <h1 id='projectHeading'>Projects Developed for Corporate <br /> Clients</h1>
 
                 <div className="project-images">
                     <button className="arrow left" onClick={prevImage}>&lt;</button>
@@ -99,8 +99,30 @@ const Portfolio = () => {
                 </div>
             </div>
             <div className='resume'>
-                <div></div>
-                <div></div>
+                <div className='resumeContent'>
+                    <div className='experiences'>
+                        <h1>Experiences</h1>
+                        <br />
+                        <div className='timeline'>
+                            <span className='year'>2023</span>
+                            <div className='timelineInfo'>
+                                <h2>SoftWare Developer</h2>
+                                <span>
+                                    • Developed efficient algorithms for data processing. <br />
+                                    • Created engaging user interfaces for client applications.<br />
+                                    • Contributed to a cutting-edge mobile application, implementing real-time chat<br />
+                                    functionality and push notifications.<br />
+                                    • Worked on a secret project involving machine learning and natural language processing.<br />
+                                    • Conducted code reviews and participated in team discussions.<br />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Educations</h1>
+                    </div>
+
+                </div>
             </div>
         </div>
     );

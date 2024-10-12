@@ -269,10 +269,11 @@
     }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1600px) {
+@media screen and (min-width: 1200px){
     #myImage {
         height: 20rem;
     }
+    
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1300px) {
@@ -294,55 +295,6 @@
     }
 }
 
-@media screen and (max-width: 750px) {
-    #myImage {
-        margin-left: 0rem;
-        margin-right: 0;
-        /* Remove margin-right to prevent overflow */
-        width: 100%;
-        /* Make the image responsive */
-    }
-
-    .body {
-        display: block;
-        margin: 0 auto;
-        padding: 0;
-        /* Ensure no padding causes overflow */
-        width: 100%;
-        /* Set the width to 100% to prevent any overflow */
-    }
-
-    .topNavLinks,
-    .theme {
-        display: none;
-        /* Hide top navigation on smaller screens */
-    }
-
-    .Info {
-        margin-left: 2rem;
-    }
-
-    .theme {
-        margin-right: 0rem;
-        display: block;
-    }
-
-    .userDiv {
-        margin-left: 1rem;
-    }
-
-    #themeColor {
-        display: none;
-    }
-
-    #menuIcon {
-        display: block;
-        height: 2rem;
-        cursor: pointer;
-    }
-}
-
-/* Dropdown Menu Styles */
 .dropdownMenu {
     position: absolute;
     /* Position it below the nav */
@@ -416,20 +368,29 @@
 
 .project-images {
     position: relative;
-    width: 100%; /* Full width of the parent container */
-    max-width: 1000px; /* Maximum width for the image slider */
-    height: 600px; /* Height of the image container */
-    margin: 0 auto; /* Center the slider horizontally */
+    width: 100%;
+    /* Full width of the parent container */
+    max-width: 1000px;
+    /* Maximum width for the image slider */
+    height: 600px;
+    /* Height of the image container */
+    margin: 0 auto;
+    /* Center the slider horizontally */
     overflow: hidden;
 }
 
 .project-images img {
-    width: 100%; /* Make the image take the full width of the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    /* Make the image take the full width of the container */
+    height: auto;
+    /* Maintain aspect ratio */
     display: block;
-    margin: 0 auto; /* Center the image */
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.8); /* Shadow only on the left */
-    border-radius: 5px; /* Optional: add border radius for a smoother look */
+    margin: 0 auto;
+    /* Center the image */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.8);
+    /* Shadow only on the left */
+    border-radius: 5px;
+    /* Optional: add border radius for a smoother look */
 }
 
 
@@ -441,35 +402,203 @@
     border: none;
     cursor: pointer;
     padding: 10px;
-    font-size: 24px; /* Adjust size as needed */
+    font-size: 24px;
+    /* Adjust size as needed */
     z-index: 10;
-    border-radius: 5px; /* Optional: add border radius for a nicer look */
+    border-radius: 5px;
+    /* Optional: add border radius for a nicer look */
 }
 
 .arrow.left {
-    left: 10px; /* Adjust position as needed */
+    left: 10px;
+    /* Adjust position as needed */
 }
 
 .arrow.right {
-    right: 10px; /* Adjust position as needed */
+    right: 10px;
+    /* Adjust position as needed */
 }
 
 .indicators {
     display: flex;
-    justify-content: center; /* Center the indicators */
-    margin-top: 10px; /* Space between the image and indicators */
+    justify-content: center;
+    /* Center the indicators */
+    margin-top: 10px;
+    /* Space between the image and indicators */
 }
 
 .indicator {
-    width: 12px; /* Size of the circles */
-    height: 12px; /* Size of the circles */
-    border-radius: 50%; /* Make them circular */
-    background-color: #ccc; /* Inactive color */
-    margin: 0 5px; /* Space between circles */
-    cursor: pointer; /* Show pointer on hover */
-    transition: background-color 0.3s; /* Smooth transition for color change */
+    width: 12px;
+    /* Size of the circles */
+    height: 12px;
+    /* Size of the circles */
+    border-radius: 50%;
+    /* Make them circular */
+    background-color: #ccc;
+    /* Inactive color */
+    margin: 0 5px;
+    /* Space between circles */
+    cursor: pointer;
+    /* Show pointer on hover */
+    transition: background-color 0.3s;
+    /* Smooth transition for color change */
 }
 
 .indicator.active {
-    background-color: #FD8F00; /* Active color */
+    background-color: #FD8F00;
+    /* Active color */
+}
+
+.resume h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    Color: #353535
+}
+
+.resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    border: 2px solid #FD8F00;
+}
+
+.resumeContent {
+    display: flex;
+    width: 75%;
+    border: 2px solid #FD8F00;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 750px) {
+    #myImage {
+        margin-left: 0rem;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .body {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        /* Ensure no padding causes overflow */
+        width: 100%;
+        /* Set the width to 100% to prevent any overflow */
+    }
+
+    .topNavLinks,
+    .theme {
+        display: none;
+        /* Hide top navigation on smaller screens */
+    }
+
+    .Info {
+        margin-left: 2rem;
+    }
+
+    .theme {
+        margin-right: 0rem;
+        display: block;
+    }
+
+    .userDiv {
+        margin-left: 1rem;
+    }
+
+    #themeColor {
+        display: none;
+    }
+
+    #menuIcon {
+        display: block;
+        height: 2rem;
+        cursor: pointer;
+    }
+
+    #projectHeading {
+        font-size: 28px;
+    }
+
+    .resume {
+        display: inline-block;
+        border: 2px solid #FD8F00;
+        width: 90%;
+        margin-top: 2rem;
+        text-align: left;
+    }
+
+    .resumeContent {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        border: 2px solid #FD8F00;
+    }
+
+    .project-images img {
+        width: 90%;
+        /* Make the image take the full width of the container */
+        height: auto;
+        /* Maintain aspect ratio */
+        display: block;
+        margin: 0 auto;
+        /* Center the image */
+        box-shadow: -5px 0 18px rgba(0, 0, 0, 0.8);
+        /* Shadow only on the left */
+        border-radius: 5px;
+        /* Optional: add border radius for a smoother look */
+    }
+
+    .experiences {
+        width: 90%;
+        justify-content: left;
+        text-align: left;
+    }
+
+    .timelineInfo {
+        margin-top: -20px;
+        border: 2px solid red;
+        margin-left: 10px;
+    }
+
+}
+
+.timeline {
+    display: flex;
+}
+
+.timelineInfo {
+    margin-top: -20px;
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.experiences {
+    width: 50%;
+    justify-content: left;
+    text-align: left;
+}
+
+.experiences h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 46px;
+    Color: #353535
+}
+
+.year {
+    height: 60px;
+    width: 100px;
+    text-align: center;
+    align-content: center;
+    border-radius: 100%;
+    color: white;
+    background-color: #474559;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: normal;
 }
