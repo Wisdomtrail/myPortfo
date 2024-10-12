@@ -100,7 +100,7 @@ const Portfolio = () => {
             </div>
             <div className='resume'>
                 <div className='resumeContent'>
-                    <div className='experiences'>
+                    <div className='experiences' id='experiences'>
                         <h1>Experiences</h1>
                         <br />
                         <div className='timeline'>

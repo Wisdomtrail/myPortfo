@@ -550,7 +550,7 @@
         /* Optional: add border radius for a smoother look */
     }
 
-    .experiences {
+    #experiences {
         width: 90%;
         justify-content: left;
         text-align: left;
