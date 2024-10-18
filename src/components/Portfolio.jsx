@@ -4,16 +4,19 @@ import { faFile, faMoon, faUser } from '@fortawesome/free-regular-svg-icons';
 import '../styles/Portfolio.css';
 import myImage from '../assests/svg/illustration.svg';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import TSH from '../assests/images/TSH.png'
-
+import TSH from '../assests/images/TSH.png';
+import PrivShare from '../assests/images/PrivShare.jpeg';
+import egen from '../assests/images/egen.jpeg';
+import Menjar from '../assests/images/Menjar.jpeg';
+import ERescue from '../assests/images/ERescue.jpeg';
 const Portfolio = () => {
 
     const images = [
         TSH,
-        'path/to/image2.jpg',
-        'path/to/image3.jpg',
-        'path/to/image4.jpg',
-        'path/to/image5.jpg',
+        PrivShare,
+        egen,
+        Menjar,
+        ERescue
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -104,7 +107,7 @@ const Portfolio = () => {
                         <h1>Experiences</h1>
                         <br />
                         <div className='timeline'>
-                            <span className='year'>2023</span>
+                            <span className='year' id='year'>2023</span>
                             <div className='timelineInfo'>
                                 <h2>SoftWare Developer</h2>
                                 <span>
@@ -118,10 +121,67 @@ const Portfolio = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className='education' id='education'>
                         <h1>Educations</h1>
+                        <br />
+                        <div className='timeline'>
+                            <span className='eyear' id='eyear'>2023</span>
+                            <div className='timelineInfo'>
+                                <h2>Education</h2>
+                                <span>
+                                    • Developed a fully functional web application from scratch.<br />
+                                    • Mastered various programming languages and technologies.<br />
+                                    • Achieved hands-on experience with Java, Python, Django, Spring Boot, React, MySQL, NestJs, NodeJs, MongoDB.<br />
+                                    • Developed efficient algorithms for data processing.<br />
+                                    • Created engaging user interfaces for client applications.<br />
+                                    • Contributed to a cutting-edge mobile application, implementing real-time chat functionality and push notifications.<br />
+                                    • Worked on a secret project involving machine learning and natural language processing.<br />
+                                    • Conducted code reviews and participated in team discussions.<br />
+                                    • Organized team-building events, fostering a positive team culture.<br />
+                                </span>
+                            </div>
+
+                        </div>
                     </div>
 
+                </div>
+            </div>
+            <div className='contactMe' id='contactMe'>
+            <div className='map' id="map">
+                <div className='col-lg-5 mr-lg-5 col-12'>
+                    <div className='google-map w-100'>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.558402180099!2d-73.99373482142036!3d40.75895421922642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855b8fb3083%3A0xa0f9aef176042a5c!2sTheater+District%2C+New+York%2C+NY%2C+USA!5e0!3m2!1sen!2smm!4v1549875377188"
+                            width="100%"
+                            height="300"
+                            frameBorder="0"
+                            style={{ border: 0 }} // Use an object for inline styles
+                            allowFullScreen=""
+                        ></iframe>
+                    </div>
+                    <div className='contact-info d-flex justify-content-between align-items-center py-4 px-lg-5' >
+                        <div className='contact-info-item'>
+                            <h3 className='mb-3 text-white'>Say hello</h3>
+                            <p className='footer-text mb-0'>010 020 0960</p>
+                            <p><a href="mailto:hello@domain.co" className='text-white'>sunepa091522@gmail.com</a></p>
+                        </div>
+                        <ul className='social-links d-flex'>
+
+                        </ul>
+                    </div>
+                    <br /><br />
+                </div>
+            </div>
+
+                <div className='work'>
+                    <h1>
+                    Interested to work together? <br /> <span> Let's talk</span>
+                    </h1>
+                    <div>
+                    <input type="text" />
+                    <input type="text" /><br />
+                    <input type="text" />
+                    </div>
                 </div>
             </div>
         </div>
