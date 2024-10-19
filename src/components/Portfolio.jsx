@@ -46,10 +46,10 @@ const Portfolio = () => {
                     Sunday
                 </div>
                 <div className='topNavLinks'>
-                    <a href="" data-hover="About">About</a>
-                    <a href="" data-hover="Projects">Projects</a>
-                    <a href="" data-hover="Resume/Cv">Resume/Cv</a>
-                    <a href="" data-hover="Contact">Contact</a>
+                    <a href="#info" data-hover="About">About</a>
+                    <a href="#projects" data-hover="Projects">Projects</a>
+                    <a href="#resume" data-hover="Resume/Cv">Resume/Cv</a>
+                    <a href="#contactMe" data-hover="Contact">Contact</a>
                 </div>
 
                 <div className='theme'>
@@ -63,16 +63,16 @@ const Portfolio = () => {
 
             {/* Dropdown Menu */}
             <div className={`dropdownMenu ${isDropdownOpen ? 'open' : ''}`}>
-                <a href="" data-hover="About">About</a>
-                <a href="" data-hover="Projects">Projects</a>
-                <a href="" data-hover="Resume/Cv">Resume/Cv</a>
-                <a href="" data-hover="Contact">Contact</a>
+                <a href="#info" data-hover="About">About</a>
+                <a href="#projects" data-hover="Projects">Projects</a>
+                <a href="#resume" data-hover="Resume/Cv">Resume/Cv</a>
+                <a href="#contactMe" data-hover="Contact">Contact</a>
             </div>
 
             <br /><br /><br /><br /><br />
 
             <div className='body'>
-                <div className='Info'>
+                <div className='Info' id='info'>
                     <span>Welcome to my portfolio website!</span>
                     <h1>Hey folks, I'm <span className="name">Sunday</span><br /><span className="title">Web Designer</span></h1>
                     <span>Building a successful product is a challenge. I am highly energetic in user <br /> experience design, interfaces and web development.</span>
@@ -83,7 +83,7 @@ const Portfolio = () => {
                     <img id='myImage' src={myImage} alt="" />
                 </div>
             </div>
-            <div className='projects'>
+            <div className='projects' id='projects'>
                 <h1 id='projectHeading'>Projects Developed for Corporate <br /> Clients</h1>
 
                 <div className="project-images">
@@ -101,7 +101,7 @@ const Portfolio = () => {
                     </div>
                 </div>
             </div>
-            <div className='resume'>
+            <div className='resume' id='resume'>
                 <div className='resumeContent'>
                     <div className='experiences' id='experiences'>
                         <h1>Experiences</h1>
@@ -147,40 +147,42 @@ const Portfolio = () => {
                 </div>
             </div>
             <div className='contactMe' id='contactMe'>
-            <div className='map' id="map">
-                <div className='col-lg-5 mr-lg-5 col-12'>
-                    <div className='google-map w-100'>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.558402180099!2d-73.99373482142036!3d40.75895421922642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855b8fb3083%3A0xa0f9aef176042a5c!2sTheater+District%2C+New+York%2C+NY%2C+USA!5e0!3m2!1sen!2smm!4v1549875377188"
-                            width="100%"
-                            height="300"
-                            frameBorder="0"
-                            style={{ border: 0 }} // Use an object for inline styles
-                            allowFullScreen=""
-                        ></iframe>
-                    </div>
-                    <div className='contact-info d-flex justify-content-between align-items-center py-4 px-lg-5' >
-                        <div className='contact-info-item'>
-                            <h3 className='mb-3 text-white'>Say hello</h3>
-                            <p className='footer-text mb-0'>010 020 0960</p>
-                            <p><a href="mailto:hello@domain.co" className='text-white'>sunepa091522@gmail.com</a></p>
+                <div className='map' id="map">
+                    <div className='col-lg-5 mr-lg-5 col-12'>
+                        <div className='google-map w-100'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.558402180099!2d-73.99373482142036!3d40.75895421922642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855b8fb3083%3A0xa0f9aef176042a5c!2sTheater+District%2C+New+York%2C+NY%2C+USA!5e0!3m2!1sen!2smm!4v1549875377188"
+                                width="100%"
+                                height="300"
+                                frameBorder="0"
+                                style={{ border: 0 }} // Use an object for inline styles
+                                allowFullScreen=""
+                            ></iframe>
                         </div>
-                        <ul className='social-links d-flex'>
+                        <div className='contact-info d-flex justify-content-between align-items-center py-4 px-lg-5' >
+                            <div className='contact-info-item'>
+                                <h3 className='mb-3 text-white'>Say hello</h3>
+                                <p className='footer-text mb-0'>08134132226</p>
+                                <p><a href="mailto:hello@domain.co" className='text-white'>sunepa091522@gmail.com</a></p>
+                            </div>
+                            <ul className='social-links d-flex'>
 
-                        </ul>
+                            </ul>
+                        </div>
+                        <br /><br />
                     </div>
-                    <br /><br />
                 </div>
-            </div>
 
                 <div className='work'>
                     <h1>
-                    Interested to work together? <br /> <span> Let's talk</span>
+                        Interested to work together? <br /> <span> Let's talk</span>
                     </h1>
                     <div>
-                    <input type="text" />
-                    <input type="text" /><br />
-                    <input type="text" />
+                        <div id='gg' className='gg'>
+                            <input type="text" placeholder='Your Name' /><br />
+                            <input type="text" placeholder='Email' /><br />
+                        </div>
+                        <textarea className='message' placeholder='message' id='message'></textarea>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,9 @@
 .mainContainer {
     font-family: "Maven Pro", sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 #menuIcon {
     display: none;
@@ -600,10 +603,39 @@
         margin-top: 10%;
         margin-left: 5%;
     }
-
+    #gg{
+        display: block;
+    }
+    #message{
+        width: 90%;
+    }
+    #gg input{
+      width: 90%;
+    }
+}
+.gg input{
+    height: 45px;
+    width: 220px;
+    margin-right: 13px;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+.message {
+    height: 200px;
+    width: 480px;
+    margin-right: 13px;
+    margin-left: 13px;
+    margin-bottom: 20px;
+    padding-top: 5px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Ensures padding is included in the height */
+    overflow: auto; /* Allows scrolling if the content exceeds the height */
+    resize: none; /* Disables resizing if needed */
 }
 
 .timeline {
+    display: flex;
+}
+.gg{
     display: flex;
 }
 
