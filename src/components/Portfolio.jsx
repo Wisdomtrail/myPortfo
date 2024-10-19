@@ -77,7 +77,12 @@ const Portfolio = () => {
                     <h1>Hey folks, I'm <span className="name">Sunday</span><br /><span className="title">Web Designer</span></h1>
                     <span>Building a successful product is a challenge. I am highly energetic in user <br /> experience design, interfaces and web development.</span>
                     <br /><br />
-                    <button> <FontAwesomeIcon icon={faFile} /> Download resume</button>
+                    <a href='' download={'../assests/file/myCv.pdf'}>
+                        <button>
+                            <FontAwesomeIcon icon={faFile} /> Download resume
+                        </button>
+                    </a>
+
                 </div><br /><br /><br /><br />
                 <div className='Image'>
                     <img id='myImage' src={myImage} alt="" />
@@ -162,7 +167,7 @@ const Portfolio = () => {
                         <div className='contact-info d-flex justify-content-between align-items-center py-4 px-lg-5' >
                             <div className='contact-info-item'>
                                 <h3 className='mb-3 text-white'>Say hello</h3>
-                                <p className='footer-text mb-0'>08134132226</p>
+                                <p className='footer-text mb-0' id='number'>08134132226</p>
                                 <p><a href="mailto:hello@domain.co" className='text-white'>sunepa091522@gmail.com</a></p>
                             </div>
                             <ul className='social-links d-flex'>
