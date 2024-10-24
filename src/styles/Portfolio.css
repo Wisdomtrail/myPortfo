@@ -752,3 +752,15 @@ html {
 .work h1{
     font-size: 40px;
 }
+.submit{
+    background: #ffc200;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    height: 40px;
+    margin-left: 50%;
+    width: 40%;
+}

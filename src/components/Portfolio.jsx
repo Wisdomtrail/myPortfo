@@ -187,7 +187,8 @@ const Portfolio = () => {
                             <input type="text" placeholder='Your Name' /><br />
                             <input type="text" placeholder='Email' /><br />
                         </div>
-                        <textarea className='message' placeholder='message' id='message'></textarea>
+                        <textarea className='message' placeholder='message' id='message'></textarea><br />
+                        <button className='submit' id='submit'>Send</button>
                     </div>
                 </div>
             </div>
