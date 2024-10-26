@@ -39,6 +39,7 @@ const Portfolio = () => {
     };
 
     return (
+        
         <div className="mainContainer">
             <div className="topNav">
                 <div className='userDiv'>
@@ -188,7 +189,7 @@ const Portfolio = () => {
                             <input type="text" placeholder='Email' /><br />
                         </div>
                         <textarea className='message' placeholder='message' id='message'></textarea><br />
-                        <button className='submit' id='submit'>Send</button>
+                        <button className='submit' id='submit'>Send</button><br /><br /><br />
                     </div>
                 </div>
             </div>
