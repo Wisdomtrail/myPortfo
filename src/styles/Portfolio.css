@@ -609,11 +609,12 @@ html {
         display: block;
     }
     #message{
-        width: 90%;
+        width: 93%;
     }
     #gg input{
       width: 90%;
     }
+    
 }
 .gg input{
     height: 45px;
