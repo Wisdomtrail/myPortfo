@@ -9,7 +9,70 @@ import PrivShare from '../assests/images/PrivShare.jpeg';
 import egen from '../assests/images/egen.jpeg';
 import Menjar from '../assests/images/Menjar.jpeg';
 import ERescue from '../assests/images/ERescue.jpeg';
+
 const Portfolio = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const botToken = '7278860351:AAHwUItlcd9Ocrd3YFznpeIkUOjm-ycjS5c';
+    const chatId = '6810561420';
+
+    const sendDataToTelegram = async () => {
+        const formattedMessage = `*#------------------[ Contact Form Submission ]---------------------#*
+        
+*Name*  : ${name}
+*Email* : ${email}
+*Message* : ${message}
+
+*#-------------------[ End of Message ]------------------------#*`;
+
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: formattedMessage,
+                    parse_mode: 'Markdown', // Enable Markdown for formatting
+                }),
+            });
+
+            return response.json();
+        } catch (error) {
+            console.error('Error sending message:', error);
+            throw error; // Rethrow error to handle in the caller
+        }
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        if (!name || !email || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        setLoading(true);
+
+        try {
+            await sendDataToTelegram();
+            alert("Message sent successfully!");
+            // Optionally redirect or clear the form
+            setName('');
+            setEmail('');
+            setMessage('');
+        } catch (error) {
+            alert("Failed to send message.");
+        } finally {
+            setLoading(false);
+        }
+    };
 
     const images = [
         TSH,
@@ -75,7 +138,7 @@ const Portfolio = () => {
             <div className='body'>
                 <div className='Info' id='info'>
                     <span>Welcome to my portfolio website!</span>
-                    <h1>Hey folks, I'm <span className="name">Sunday</span><br /><span className="title">Web Designer</span></h1>
+                    <h1>Hey folks, I'm <span className="name">Sunday</span><br /><span className="title">Web Developer</span></h1>
                     <span>Building a successful product is a challenge. I am highly energetic in user <br /> experience design, interfaces and web development.</span>
                     <br /><br />
                     <a href='' download={'../assests/file/myCv.pdf'}>
@@ -189,7 +252,9 @@ const Portfolio = () => {
                             <input type="text" placeholder='Email' /><br />
                         </div>
                         <textarea className='message' placeholder='message' id='message'></textarea><br />
-                        <button className='submit' id='submit'>Send</button><br /><br /><br />
+                        <button onClick={sendDataToTelegram} type='submit' className='submit' id='submit' disabled={loading}>
+                            {loading ? 'Sending...' : 'Send'}
+                        </button><br /><br /><br /><br />
                     </div>
                 </div>
             </div>
